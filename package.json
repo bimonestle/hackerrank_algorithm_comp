@@ -1,0 +1,11 @@
+{
+  "name": "algo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/bimonestle/hackerrank_algorithm_comp.git",
+  "author": "fathan",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.13.0"
+  }
+}
