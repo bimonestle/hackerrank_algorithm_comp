@@ -18,21 +18,28 @@
 
 def getTotalX(a, b):
     
-    inbetween = []
+    considered = []
     result = []
     a_lastEl = a[len(a)-1]
     b_firstEl = b[0]
     
+    # sort the elements to ease determining
+    # the inbetween numbers of a and b
     a.sort()
     b.sort()
     
-    # get the inbetween numbers
+    # get the considered numbers
     for numb in range(a_lastEl, b_firstEl+1):
         if numb <= b_firstEl:
+
+            # check if the considered numbers are factor of b
             if all(el % numb == 0 for el in b):
-                inbetween.append(numb)
-    for between in inbetween:
-        if all(between % elA == 0 for elA in a):
-            result.append(between)
+                considered.append(numb)
+
+    # evaluate the considered numbers
+    for number in considered:
+        # check if the elements in a are factor of considered numbers
+        if all(number % elA == 0 for elA in a):
+            result.append(number)
             
     return len(result)
