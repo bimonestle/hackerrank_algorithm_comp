@@ -23,8 +23,8 @@ def getTotalX(a, b):
     a_lastEl = a[len(a)-1]
     b_firstEl = b[0]
     
-    # sort the elements to ease determining
-    # the inbetween numbers of a and b
+    # sort the elements to ease
+    # determining the inbetween numbers of a and b
     a.sort()
     b.sort()
     
