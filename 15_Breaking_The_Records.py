@@ -46,6 +46,5 @@ def breakingRecords(scores):
             maxx = scores[idx]
 
     # assign final values to an empty array and return it
-    result.append(countMax)
-    result.append(countMin)
+    result.extend([countMax, countMin])
     return result
