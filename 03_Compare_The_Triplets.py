@@ -1,4 +1,4 @@
-# # Alice and Bob each created one problem for HackerRank.
+# Alice and Bob each created one problem for HackerRank.
 # A reviewer rates the two challenges, awarding points on a scale
 # from 1 to 100 for three categories:
 # problem clarity, originality, and difficulty.
@@ -20,22 +20,30 @@
 # a = [1, 2, 3]
 # b = [3, 2, 1]
 
-# For elements *0*, Bob is awarded a point because a[0] .
+# For elements *0*, Bob is awarded a point because a[0].
 # For the equal elements a[1] and b[1], no points are earned.
 # Finally, for elements 2, a[2] > b[2] so Alice receives a point.
 # The return array is [1, 1] with Alice's score first and Bob's second.
 
 def compareTriplets(a, b):
+    # variables initialization
     alice = 0
     bob = 0
     result = []
 
+    # comparing each participants' score in the same index of array.
+    # we can take any array to fetch its lenth since it's gonna be 3x3 array.
     for idx in range(len(a)):
+
+        # if alice score is bigger than bob,
+        # then add 1
         if a[idx] > b[idx]:
             alice += 1
+        
+        # if bob score is bigger than alice,
+        # then add 1
         elif a[idx] < b[idx]:
             bob += 1
+
     result.extend([alice, bob])
-
     return result
-
